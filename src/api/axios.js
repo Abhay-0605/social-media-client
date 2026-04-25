@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "https://social-media-server-gidr.onrender.com",
+    baseURL: "https://social-media-server-gidr.onrender.com/api",
     withCredentials: true,
 });
 

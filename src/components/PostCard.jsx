@@ -26,7 +26,7 @@ function PostCard({ post }) {
     const { user } = useSelector(state => state.auth);
     const [commentText, setCommentText] = useState("");
     const [showComments, setShowComments] = useState(false);
-
+    if (!post.user) return null;
     const isLiked = post.likes.some(id => id === user._id || id._id === user._id);
     const isOwner = post.user._id === user._id || post.user === user._id;
 
